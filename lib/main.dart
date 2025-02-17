@@ -30,17 +30,23 @@ void main() {
 
   positionalArgFunc([], []);
 
-  positionalArgFunc([
-    'This is a very long string that exceeds the 80 character limit as a list item.',
-    // `require_trailing_commas` warns here
-  ], []);
+  positionalArgFunc(
+    [
+      'This is a very long string that exceeds the 80 character limit as a list item.',
+      // `require_trailing_commas` warns here
+    ],
+    [],
+  );
 
   positionalArgFuncListFirst([], '');
 
-  positionalArgFuncListFirst([
-    'This is a very long string that exceeds the 80 character limit as a list item.',
-    // `require_trailing_commas` warns here
-  ], '');
+  positionalArgFuncListFirst(
+    [
+      'This is a very long string that exceeds the 80 character limit as a list item.',
+      // `require_trailing_commas` warns here
+    ],
+    '',
+  );
 
   positionalArgFuncListLast(
     'This is a very long string that exceeds the 80 character limit as a list item.',
