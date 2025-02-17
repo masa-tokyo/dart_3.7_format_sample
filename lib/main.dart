@@ -1,5 +1,17 @@
 import 'package:flutter/material.dart';
 
+void namedArgFunc({List<String>? list1, List<String>? list2}) {}
+
+void namedArgFuncListFirst({List<String>? list, String? string}) {}
+
+void positionalArgFunc(List<String>? list1, List<String>? list2) {}
+
+void positionalArgFuncListFirst(List<String>? list, String? string) {}
+
+void positionalArgFuncListLast(String? string, List<String>? list) {}
+
+void positionalArgFuncString(String? string1, String? string2) {}
+
 void main() {
   namedArgFunc(list1: [], list2: []);
   namedArgFunc(
@@ -23,6 +35,8 @@ void main() {
     // `require_trailing_commas` warns here
   ], []);
 
+  positionalArgFuncListFirst([], '');
+
   positionalArgFuncListFirst([
     'This is a very long string that exceeds the 80 character limit as a list item.',
     // `require_trailing_commas` warns here
@@ -40,18 +54,6 @@ void main() {
 
   runApp(const MainApp());
 }
-
-void namedArgFunc({List<String>? list1, List<String>? list2}) {}
-
-void namedArgFuncListFirst({List<String>? list, String? string}) {}
-
-void positionalArgFunc(List<String>? list1, List<String>? list2) {}
-
-void positionalArgFuncListFirst(List<String>? list, String? string) {}
-
-void positionalArgFuncListLast(String? string, List<String>? list) {}
-
-void positionalArgFuncString(String? string1, String? string2) {}
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
