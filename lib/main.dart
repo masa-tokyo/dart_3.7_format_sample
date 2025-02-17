@@ -1,23 +1,57 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  namedArgFunc(callback: () => null, keys: []);
+  namedArgFunc(list1: [], list2: []);
   namedArgFunc(
-    callback: () {
-      return null;
-    },
-    keys: [],
+    list1: [
+      'This is a very long string that exceeds the 80 character limit as a list item.',
+    ],
+    list2: [],
   );
 
-  positionalArgFunc(() => null, []);
-  positionalArgFunc(() {
-    return null;
-    // `require_trailing_commas` warns here:
-    // https://dart.dev/tools/linter-rules/require_trailing_commas
-  }, []);
+  namedArgFuncListFirst(
+    list: [
+      'This is a very long string that exceeds the 80 character limit as a list item.',
+    ],
+    string: '',
+  );
+
+  positionalArgFunc([], []);
+
+  positionalArgFunc([
+    'This is a very long string that exceeds the 80 character limit as a list item.',
+    // `require_trailing_commas` warns here
+  ], []);
+
+  positionalArgFuncListFirst([
+    'This is a very long string that exceeds the 80 character limit as a list item.',
+    // `require_trailing_commas` warns here
+  ], '');
+
+  positionalArgFuncListLast(
+    'This is a very long string that exceeds the 80 character limit as a list item.',
+    [],
+  );
+
+  positionalArgFuncString(
+    'This is a very long string that exceeds the 80 character limit as a list item.',
+    '',
+  );
 
   runApp(const MainApp());
 }
+
+void namedArgFunc({List<String>? list1, List<String>? list2}) {}
+
+void namedArgFuncListFirst({List<String>? list, String? string}) {}
+
+void positionalArgFunc(List<String>? list1, List<String>? list2) {}
+
+void positionalArgFuncListFirst(List<String>? list, String? string) {}
+
+void positionalArgFuncListLast(String? string, List<String>? list) {}
+
+void positionalArgFuncString(String? string1, String? string2) {}
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -28,12 +62,4 @@ class MainApp extends StatelessWidget {
       home: Scaffold(body: Center(child: Text('Hello World!'))),
     );
   }
-}
-
-void namedArgFunc({Object? Function()? callback, List<Object>? keys}) {
-  callback?.call();
-}
-
-void positionalArgFunc(Object? Function()? callback, List<Object>? keys) {
-  callback?.call();
 }
