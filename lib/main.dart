@@ -1,53 +1,53 @@
 import 'package:flutter/material.dart';
 
-void namedArgFunc({List<String>? list1, List<String>? list2}) {}
+void namedParamsFuncTwoLists({List<String>? list1, List<String>? list2}) {}
 
-void namedArgFuncListFirst({List<String>? list, String? string}) {}
+void namedParamsFuncListThenString({List<String>? list, String? string}) {}
 
-void positionalArgFunc(List<String>? list1, List<String>? list2) {}
+void positionalParamsFuncTwoLists(List<String>? list1, List<String>? list2) {}
 
-void positionalArgFuncListFirst(List<String>? list, String? string) {}
+void positionalParamsFuncListThenString(List<String>? list, String? string) {}
 
-void positionalArgFuncListLast(String? string, List<String>? list) {}
+void positionalParamsFuncStringThenList(String? string, List<String>? list) {}
 
-void positionalArgFuncString(String? string1, String? string2) {}
+void positionalParamsTwoStrings(String? string1, String? string2) {}
 
 void main() {
-  namedArgFunc(list1: [], list2: []);
-  namedArgFunc(
+  namedParamsFuncTwoLists(list1: [], list2: []);
+  namedParamsFuncTwoLists(
     list1: [
       'This is a very long string that exceeds the 80 character limit as a list item.',
     ],
     list2: [],
   );
 
-  namedArgFuncListFirst(
+  namedParamsFuncListThenString(
     list: [
       'This is a very long string that exceeds the 80 character limit as a list item.',
     ],
     string: '',
   );
 
-  positionalArgFunc([], []);
+  positionalParamsFuncTwoLists([], []);
 
-  positionalArgFunc([
+  positionalParamsFuncTwoLists([
     'This is a very long string that exceeds the 80 character limit as a list item.',
     // `require_trailing_commas` warns here
   ], []);
 
-  positionalArgFuncListFirst([], '');
+  positionalParamsFuncListThenString([], '');
 
-  positionalArgFuncListFirst([
+  positionalParamsFuncListThenString([
     'This is a very long string that exceeds the 80 character limit as a list item.',
     // `require_trailing_commas` warns here
   ], '');
 
-  positionalArgFuncListLast(
+  positionalParamsFuncStringThenList(
     'This is a very long string that exceeds the 80 character limit as a list item.',
     [],
   );
 
-  positionalArgFuncString(
+  positionalParamsTwoStrings(
     'This is a very long string that exceeds the 80 character limit as a list item.',
     '',
   );
