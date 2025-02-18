@@ -8,7 +8,7 @@ void positionalParamsFuncListThenString(List<String>? list, String? string) {}
 
 void positionalParamsFuncStringThenList(String? string, List<String>? list) {}
 
-void positionalParamsTwoStrings(String? string1, String? string2) {}
+void positionalParamsFuncTwoStrings(String? string1, String? string2) {}
 
 void main() {
   namedParamsFuncTwoLists(list1: [], list2: []);
@@ -36,7 +36,7 @@ void main() {
     [],
   );
 
-  positionalParamsTwoStrings(
+  positionalParamsFuncTwoStrings(
     'This is a very long string that exceeds the 80 character limit as a list item.',
     '',
   );
