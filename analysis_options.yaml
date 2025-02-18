@@ -1,8 +1,10 @@
-include: package:flutter_lints/flutter.yaml
+include: package:pedantic_mono/analysis_options.yaml
 
 formatter:
     page_width: 80
 
-linter:
-  rules:
-    - require_trailing_commas
+# The rule is defined in 1.30.2:
+# https://github.com/mono0926/pedantic_mono/blob/1c9974044212cdc2ae3a02c6d486a965122e6766/lib/analysis_options.yaml#L80
+#linter:
+#  rules:
+#    - require_trailing_commas

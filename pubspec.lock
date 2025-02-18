@@ -55,7 +55,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_lints:
-    dependency: "direct dev"
+    dependency: transitive
     description:
       name: flutter_lints
       sha256: "5398f14efa795ffb7a33e9b6a08798b26a180edac4ad7db3f231e40f82ce11e1"
@@ -131,6 +131,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  pedantic_mono:
+    dependency: "direct dev"
+    description:
+      name: pedantic_mono
+      sha256: "1bc63290d6a97db7c4cc996870f04d05cae1025b29cee831d26281583d0a6acb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.30.2"
   sky_engine:
     dependency: transitive
     description: flutter
