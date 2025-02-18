@@ -23,12 +23,12 @@ void main() {
 
   positionalParamsFuncTwoLists([
     'This is a very long string that exceeds the 80 character limit as a list item.',
-    // `require_trailing_commas` warns here
+    // `require_trailing_commas` cautions here
   ], []);
 
   positionalParamsFuncListThenString([
     'This is a very long string that exceeds the 80 character limit as a list item.',
-    // `require_trailing_commas` warns here
+    // `require_trailing_commas` cautions here
   ], '');
 
   positionalParamsFuncStringThenList(
